@@ -1,0 +1,1 @@
+1) Connect to Primary / Register Device

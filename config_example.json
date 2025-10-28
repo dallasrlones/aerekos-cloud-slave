@@ -1,0 +1,94 @@
+{
+    "device_name": "cool_device",
+    "device_id": "132gfk21f32k1f321k3f",
+    "auto_use_resources": false,
+    "services": [
+        {
+            "name": "FILE_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "storage_location": "/file_manager_storage",
+            "worker_count": 5,
+            "enabled": false
+        },
+        {
+            "name": "DATABASE_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "databases": [
+                { "name": "neo4j", "port": 1337, "database_id": "ads21jkh153", "master": true }
+            ],
+            "enabled": false
+        },
+        {
+            "name": "DOCKER_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "container_host": false,
+            "services": [
+                {
+                    "name": "docunu_api",
+                    "service_id": "asdfasdfasdfsd",
+                    "container_id": "",
+                    "port": "delete this, ports will be auto assigned and saved in redis",
+                    "worker_count": 1
+                }
+            ],
+            "enabled": false
+        },
+        {
+            "name": "CDN_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "cdn_names": [],
+            "enabled": false
+        },
+        {
+            "name": "LOG_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "services": [],
+            "enabled": false
+        },
+        {
+            "name": "QUEUE_SERVICES",
+            "service_id": "asdfasdfasdfsd",
+            "queues": [
+                {
+                    "name": "poop_queue",
+                    "queue_id":"",
+                    "priority": "HIGH",
+                    "workers": [
+                        {
+                            "name": "",
+                            "worker_id": "",
+                            "container_id": "",
+                            "worker_count": 5,
+                            "dead_letter_queue_name": "poop_queue_dead_letter"
+                        }
+                    ]
+                },
+                {
+                    "name": "poop_queue_dead_letter",
+                    "queue_id": "",
+                    "priority": "low",
+                    "workers": [
+                        {
+                            "name": "",
+                            "worker_id": "",
+                            "container_id": "",
+                            "worker_count": 1
+                        }
+                    ]
+                }
+            ],
+            "enabled": false
+        },
+        {
+            "name": "SCHEDULER_SERVICES",
+            "schedulers": [
+                {
+                    "name": "poop_scheduler",
+                    "cron_setting": "xyz",
+                    "tz": "EST"
+                }
+            ],
+            "enabled": false
+        }
+    ]
+}

@@ -2,7 +2,7 @@ services:
   aerekos_slave:
     build: .
     ports:
-      - "${PORT}:3334"
+      - "3334:3334"
     env_file:
       - .env
     environment:

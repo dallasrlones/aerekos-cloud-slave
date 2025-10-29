@@ -1,0 +1,14 @@
+{
+  "name": "aerekos_slave",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  "start": "bash -lc \"./scripts/start-with-host-ip.sh\"",
+  "start:detached": "bash -lc \"./scripts/start-with-host-ip.sh -d\"",
+    "stop": "docker compose down",
+    "container:start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,11 +1,10 @@
 services:
   aerekos_slave:
-    image: node:22-slim
+    build: .
     ports:
-      - 3334:3334
-    volumes:
-      - ./aerekos_slave:/app
+      - "${PORT}:3334"
     env_file:
       - .env
-    working_dir: /app
-    command: npm start
+    environment:
+      - HOST_IP=${HOST_IP}
+    restart: always

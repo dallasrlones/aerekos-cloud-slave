@@ -7,4 +7,5 @@ services:
       - .env
     environment:
       - HOST_IP=${HOST_IP}
+      - DEVICE_SPECS=${DEVICE_SPECS}
     restart: always
